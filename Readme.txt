@@ -1,1 +1,3 @@
-3qhyq3h
+In this project, I create three topics: order topic, package topic, and notification topic. In particular, I will design notification and package subscriptions to receive messages from order topic, user subscription to receive messages from notification service, and shipping subscription to receive messages from package service.
+
+When users order an item, it will publish messages to notification and package service from the order service. When the notification service receives messages, it will publish messages to the user service to tell that they have ordered the item successfully. Finally, when the package service receives messages from the order service, it will publish its messages to the shipping service so that shippers can know which order ID from users they have to ship.
